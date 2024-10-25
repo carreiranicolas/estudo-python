@@ -4,7 +4,7 @@
 ---
 ## 🎯 Objetivo do repositório
 
-Este repositório documenta meu aprendizado da linguagem Python, com foco em consolidar conceitos teóricos e práticos por meio de exercícios e pequenos programas.
+Este repositório foi criado para documentar minha jornada de aprendizado na linguagem Python. Em sua parte teórica, ele abriga desde conceitos básicos até tópicos mais avançados. Além disso, possui exercícios e pequenos programas com o intuito de consolidar por em prática os meus conhecimentos.
 
 ## ⚙ Estrutura do repositório
 
