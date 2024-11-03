@@ -14,7 +14,6 @@ Este repositório foi criado para documentar minha jornada de aprendizado na lin
 
 ## 🛠 Tecnologias e Ferramentas utilizadas
 
-- **Google Docs:** ;
 - **VSCode:** IDE utilizada para desenvolvimento de código;
 - **Python:** 
 ---
