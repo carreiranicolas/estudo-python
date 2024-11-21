@@ -83,3 +83,5 @@ print(1<2) # Irá nos retornar True
 print(1<=2) # Irá nos retornar True
 
 print(1==2) # Irá nos retornar False
+
+print(1!=2) # Irá nos retornar True

@@ -36,10 +36,35 @@ while contador < 10:
                   # 'contador' estiver com um valor maior ou igual a 10, encerrando assim o loop.
 
 '''
-Além do loop while, outro loop que temos no pyhton é o Loop 'for':
+Além do loop while, outro loop que temos no pyhton é o Loop 'for in':
+
+O loop 'for in' é um loop utilizado para coisas finitas, ou seja, ele é utilizado quando sabemos precisamente o número de repetições que temos que ter,
+diferentemente do loop while que, apesar de poder ser utilizado para coisas finitas, costumamos utilizá-lo para coisa sinfinitas, onde não sabemos o
+número de vezes que teremos que repetir o código. Veja a estrutura do loop for:
+
+nome = 'Nicolas'
+
+for letra in nome:
+    print(letra)
+
+A variável “letra” foi criada. Isso porque o “for” passa de carácter em caracter na string “nome”, então ficou definido que “letra” seria cada caracter 
+de “nome” que o loop for itera.
+
+Além disso, Perceba que não ocorreu um loop infinito, porque o for sabe que ele deve rodar seu loop até o fim da string “nome”, diferente do while 
+que temos que definir um contador ou algo do tipo para ele parar.
 
 
+Além disso, temos uma função chamada range que, apesar de não ser dependente do loop for e vice e versa, utilizamos bastante os dois juntos.
+Ela funciona da seguinte forma: 
 
+range(start, stop, step), onde o start é o número onde começa e o stop é o número onde para (sendo que em python ele sempre irá parar em um número antes 
+do que definimos no stop. Exemplo: definimos o stop como 10, ele irá parar no 9) e também temos o step que é de quanto em quanto ele vai conatr/iterar
+(semelhante a razão que temos em uma PA)
 
+for n in range(0, 10, 2):
+    print(n)
 
+O que acontecerá nesse loop é que será exibido os números 0, 2, 4, 6, 8
+
+É importante ressaltar que tudo que vimos em while (break e continue) funciona no loop for também
 '''
