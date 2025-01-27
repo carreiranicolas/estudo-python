@@ -18,9 +18,9 @@ Este repositório foi criado com base no meu roadmap de estudos da linguagem Pyt
 - **Python:** Linguagem estudada;
 - **Miro:** Lousa interativa
 
-## 🛠 Tecnologias e Ferramentas utilizadas
+## 🔗 Acesso ao roadmap
 
-- Link para acesso do roadmap: https://miro.com/welcomeonboard/S0FQa3NTc2pNTUlqUloyT1FEWDZOc2toNnk2OHFjbEFFT1E5V3hrR1BmdXFPL0lFZ0plaFU2T01NTE1DTmVCaFFXdm9GTExnenRad3RsTldKZHlLQVJaV1NyWmN4WUVtbVFwSDZJMzV0MUZSb1pGdGErRE5IUzhtUDFBNlVTMDYhZQ==?share_link_id=165987610137
+<a href="https://miro.com/welcomeonboard/S0FQa3NTc2pNTUlqUloyT1FEWDZOc2toNnk2OHFjbEFFT1E5V3hrR1BmdXFPL0lFZ0plaFU2T01NTE1DTmVCaFFXdm9GTExnenRad3RsTldKZHlLQVJaV1NyWmN4WUVtbVFwSDZJMzV0MUZSb1pGdGErRE5IUzhtUDFBNlVTMDYhZQ==?share_link_id=165987610137">Parte básica</a>
 ---
 
 
