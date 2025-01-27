@@ -20,7 +20,7 @@ Este repositório foi criado com base no meu roadmap de estudos da linguagem Pyt
 
 ## 🔗 Acesso ao roadmap
 
-- **Parte básica:** <a href="https://miro.com/app/board/uXjVLrKlTtY=/?share_link_id=157827760010">Acesso</a>
+- **Parte básica:** <a href="https://miro.com/app/board/uXjVLrKlTtY=/?share_link_id=157827760010" target="_blank">Acesso</a>
 ---
 
 
