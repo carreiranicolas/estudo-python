@@ -19,7 +19,7 @@ else: → else é quando nenhuma das condições if e elif são atendidas, é a 
 
 
 Uma observação é que depois do elif, não precisamos ter OBRIGATORIAMENTE um else, podemos seguir colocando quantos elif nós quisermos até o momento em que nenhum
-dos elifs forem atendidos, aí deverá vir o else
+dos elifs forem atendidos, aí sim deverá vir o else
 
 Uma outra observação interessante é que existe algo chamado "operação ternária", que é basicamente um 'if else' de uma linha. Veja sua estrutura:
 
