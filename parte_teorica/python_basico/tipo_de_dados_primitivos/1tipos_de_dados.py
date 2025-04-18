@@ -67,3 +67,22 @@ print(type(1 + 1 == 2)) #Nos retorna <class 'bool'>
 
 print(type(1 + 1 == 3)) #Nos retorna <class 'bool'>
 
+
+'''
+TIPOS PRIMITIVOS = TIPOS IMUTAVEIS
+
+Os tipos primitivos que vimos acima (string, int, float, bool) também são chamados de tipos imutaveis. 
+Tipo imutável é aquele cujo valor não pode ser alterado depois que ele é criado. 
+Veja um exemplo:
+'''
+
+var = 'nicolas' #definimos a váriavel  do tipo string nicolas
+
+var[0] = 'j' #aqui estamos tentando alterar a primeira palavra de var ('n') para  'j'
+
+'''
+Ao tentarmos fazer isso e rodar o código, dará erro. Isso acontece porque string é um tipo imutável, o que
+significa que após ter sido criada, não conseguimos alterar seu valor. Já definimos var = 'nicolas', então
+agora não podemos alterar a primeira palavra da string para 'j'. 
+'''
+

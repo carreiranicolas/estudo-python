@@ -18,3 +18,9 @@ em lugares que você vai usar a mesma coisa (mesmo valor)
 nome = 'José'
 idade = 20
 maior_de_idade = idade >= 18 #Neste caso, como passamos uma operação para essa váriavel, o valor que será armazenado nesta varíavel é booleano (True ou Falso)
+
+'''
+Um detalhe sobre váriaveis é que quando salvamos algo na memória a partir de váriaveis, esse elemento tem uma
+identidade e utilizando id() em python, nós conseguimos ver a identidade do elemento que está na memória.
+'''
+print(id(nome))
