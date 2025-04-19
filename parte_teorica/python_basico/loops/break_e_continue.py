@@ -16,3 +16,35 @@ pois ele irá pular para a próxima repetição do loop
 
 Veja na prática:
 '''
+
+#BREAK
+
+i = 0
+while True:
+    if i ==3:
+        break
+    print(i) #Irá exibir 0 1 2 --> quando chega no 3, ele dá o break
+    i+=1
+
+print('-' * 40)
+
+for n in range(5):
+    if n == 3:
+        break
+    print(n) #Irá exibir 0 1 2 --> quando chega no 3, ele dá o break
+
+print('-' * 40)
+# CONTINUE
+
+for n in range(6):
+    if n == 3:
+        continue
+    print(n) #Irá exibir 0 1 2 4 5 (lembre-se que o for não conta o valor colocado, mas sim f-1), pulando assim o 3
+
+print('-' * 40)
+c = 0
+while c < 6:
+    if c == 3:
+        continue
+    print(c) #Era pra exibir 0 1 2 4 5, pulando assim o 3
+    c+=1
