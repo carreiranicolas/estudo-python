@@ -56,9 +56,9 @@ print(string.islower()) #Irá retornar True
 
 print(string.isupper()) #Irá retornar False
 
-# Método find: Irá retornar o indice 
+# Método find: retorna o indice onde temos a primeira ocorrencia do parametro que você passar (se não encontrou = -1)
 
-
+print(string.find('s')) #Retorna 6, que é o indice da string que aparece a letra 's'
 
 
 '''
@@ -92,9 +92,39 @@ Vamos aos exemplos:
 
 #Exemplo de SPLIT
 
+frase = 'Oi, tudo bem com você, meu amigo' 
+
+print(frase.split(',')) 
+
+'''
+O exemplo acima irá retornar uma lista: ['Oi', ' tudo bem com você', ' meu amigo']. Perceba que são três 
+elementos. Nós temos o 'oi', que tem uma virgula que o separa de 'tudo bem com você', que por sua vez tem
+uma virgula que o separa de 'meu amigo'. Como passamos para o split o caracter ',', ele irá dividir os 
+elementos da string a partir da virgula, gerando 3 elementos ('oi', 'tudo bem com você', 'meu amigo') que
+são todos separados por virgula
+
+'''
+
 
 #Exemplo de STRIP
 
+palavra_com_espacamento = ' ' * 20 + 'oi' #Adicionando espacamento a nossa palavra 'oi'
+print(palavra_com_espacamento) # Aqui estamos mostrando como fica nossa palavra com o espaçamento
+print(palavra_com_espacamento.strip()) # Aqui nos mostramos a aplicação do strip cortando o espaçamento
 
+'''
+No exemplo acima, nós adicionamos um espacamento a nossa palavra só para conseguir visualizar a aplicação
+do strip(). Quando aplicamos o strip à palavra com o espaçamento, ele cortará o espaçamento e deirará só
+a palavra
+
+'''
 #Exemplo de Join
+
+frases_unidas = '-'.join('abc')
+print(frases_unidas)
+
+'''
+No exemplo acima, teremos como retorno a-b-c.  Na prática, o que acontece é que para cada item do 
+nosso iterável que está dentro do join, você adiciona a string que está antes do join (o separador)
+'''
 
