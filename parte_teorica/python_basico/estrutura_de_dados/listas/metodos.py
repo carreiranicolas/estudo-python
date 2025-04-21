@@ -56,12 +56,31 @@ print(lista.count('Nicolas')) #Irá exibir 1, pois Nicolas só aparece uma vez n
 '''
 MÉTODO COPY
 
+
+
 '''
 
 
 '''
 Concatenação de listas (método extend e operador '+')
 
-Podemos fazer a conctenação de listas utilizando o método extend e o operador '+'
+Suponhamos que temos uma lista A e outra lista B e queremos juntar essas duas listas em uma lista C, podemos juntar 
+(concatenar) essas duas listas usando o sinal de “+”. Veja um exemplo
+
+lista_a = [1,2,3]
+lista_b = [4,5,6]
+
+lista_c = lista_a + lista_b
+
+print(lista_c) --> Irá retornar [1,2,3,4,5,6]
+
+Além disso, temos o método extend --> lista_a.extend(lista_b) 
+
+Acima, estenderemos a lista A para a lista B.  É um método que ocorre diretamente na lista A, ela não retorna 
+um valor, ou seja, não podemos criar a váriavel: x = lista_a.extend(lista_b), pois o extend retornará um None (não valor), 
+uma vez que é uma função que AGE DIRETAMENTE NA LISTA_A.
+
+Portanto, se fizermos lista_a.extend(lista_b) e depois demos print(lista_a), será retornado [1,2,3,4,5,6]
+
 
 '''
