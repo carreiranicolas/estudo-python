@@ -1,8 +1,8 @@
 '''
 Suponhamos que temos uma lista de nomes: nomes = [Maria, José, João], podemos desempacotar essa lista criando variáveis e 
 ir extraindo o valor. Para isso, basta fazer: nome1, nome2, nome3 = [Maria, José, João] (também poderia ser feito:
-nome1, nome2, nome3 = nomes) . Assim teremos variáveis com os valores da lista (nomes) extraídos. O nome2, por exemplo, 
-será José.
+nome1, nome2, nome3 = nomes) . Assim teremos variáveis com os valores da lista (nomes) extraídos. O nome1, neste exemplo, 
+será Maria, o nome2 seria José, o nome3 seria João.
 
 Caso tenhamos mais variáveis que valores ou mais valores que variáveis, receberemos um erro. Isso acontece porque não 
 teríamos valores suficientes para o número de variáveis (mais variáveis que valores) OU não teríamos variáveis suficientes

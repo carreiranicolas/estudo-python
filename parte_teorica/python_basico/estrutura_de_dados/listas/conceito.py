@@ -45,4 +45,7 @@ porque strings é um tipo imutável, enquanto listas é um tipo mutável.
 
 Para vermos como podemos adicionar dados, remover e outras coisas, temos que ir para o arquivo de metodos, aqui dentro
 da pasta listas
+
+Uma pequena observação (que parece até meio obvia) é que listas são iteráveis, então podemos acesssar elemento por
+elemento dela usando um loop for, por exemplo.
 '''

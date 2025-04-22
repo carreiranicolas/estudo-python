@@ -33,3 +33,8 @@ print(tupla[0]) #Aqui estamos acessando o primeiro elemento da tupla. Será exib
 tupla[0] = 'a' #Aqui estamos tentando alterar o primeiro elemento da tupla ('Nicolas') para 'a'
 
 # Isso que tentamos fazer dará erro, uma vez que tuplas, diferentemente de listas, são imutáveis
+
+'''
+Uma pequena observação (que parece até meio obvia) é que listas são iteráveis, então podemos acesssar elemento por
+elemento dela usando um loop for, por exemplo.
+'''

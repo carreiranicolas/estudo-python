@@ -43,3 +43,58 @@ for elemento in enumerate(lista):
     print(elemento)#Retorno:  # (0, 'Nicolas')
                               # (1, 'José')
                               # (2, 'Carlos')
+
+
+
+'''
+Um detalhe é que podemos utilizar o desempacotamento para obter o indice e o valor do elemento de forma separada.
+Veja:
+'''
+
+for elemento in enumerate(lista):
+    indice,valor = elemento
+    print(indice)
+    print(valor) #Retorno: # 0
+                           # Nicolas
+                           # 1
+                           # José
+                           # 2
+                           # Carlos
+
+#Podemos fazer isso de forma mais direta ainda. Veja abaixo:
+
+for indice,valor in enumerate(lista):
+    print(indice)
+    print(valor) #Retorno: # 0
+                           # Nicolas
+                           # 1
+                           # José
+                           # 2
+                           # Carlos
+
+
+'''
+Uma observação é que poderíamos dizer a partir de qual numero queremos que o enumerate numere nossos itens
+passando um start=. Veja:
+'''
+
+for elemento in enumerate(lista, start=5):
+    print(elemento)#Retorno:  # (5, 'Nicolas')
+                              # (6, 'José')
+                              # (7, 'Carlos')
+
+'''
+Vamos ver um exemplo rápido do uso do enumerate com um iteravel diferente de lista, vamos usar string
+Veja:
+'''
+string = 'Nicolas'
+
+for letra in enumerate(string):
+    print(letra) # Retorno:   # (0, 'N')
+                              # (1, 'i')
+                              # (2, 'c')
+                              # (3, 'o')
+                              # (4, 'l')
+                              # (5, 'a')
+                              # (6, 's')
+
