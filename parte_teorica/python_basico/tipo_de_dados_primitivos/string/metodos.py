@@ -128,3 +128,9 @@ No exemplo acima, teremos como retorno a-b-c.  Na prática, o que acontece é qu
 nosso iterável que está dentro do join, você adiciona a string que está antes do join (o separador)
 '''
 
+'''
+Algo que podemos utilziar com strings (e iteraveis no geral) é uma função chamada len().
+Com ela podemos ver o tamanho do nosso iteravel. Então, se tivermos, por exemplo, a palavra
+'Nicolas', e usarmos len('Nicolas'), essa função irá nos retornar 7, que o tamanho do nosso 
+iteravel (nesse caso, o número de letras)
+'''

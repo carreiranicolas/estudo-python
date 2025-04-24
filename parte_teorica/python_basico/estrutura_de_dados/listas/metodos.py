@@ -82,5 +82,11 @@ uma vez que é uma função que AGE DIRETAMENTE NA LISTA_A.
 
 Portanto, se fizermos lista_a.extend(lista_b) e depois demos print(lista_a), será retornado [1,2,3,4,5,6]
 
+'''
 
+'''
+Algo que podemos utilziar com listas (e iteraveis no geral) é uma função chamada len().
+Com ela podemos ver o tamanho do nosso iteravel. Então, se tivermos, por exemplo, a lista
+['José', 'Luiz', 'Carlos'], e usarmos len(lista), essa função irá nos retornar 3, que o tamanho do nosso 
+iteravel (nesse caso, o número de elementos dela)
 '''

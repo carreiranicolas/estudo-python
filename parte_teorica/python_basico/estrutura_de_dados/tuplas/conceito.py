@@ -37,4 +37,8 @@ tupla[0] = 'a' #Aqui estamos tentando alterar o primeiro elemento da tupla ('Nic
 '''
 Uma pequena observação (que parece até meio obvia) é que listas são iteráveis, então podemos acesssar elemento por
 elemento dela usando um loop for, por exemplo.
+
+Uma outra observação é que quando queremos acessar um elemento que está dentro de
+uma tupla, que por usa vez está dentro de uma tupla, nós vamos ter um aninhamento de tuplas
+o acesso a esse elemento será de uma forma um pouco diferença. Veja no arquivo de aninhamento.py
 '''

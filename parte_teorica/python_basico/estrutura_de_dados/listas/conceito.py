@@ -48,4 +48,8 @@ da pasta listas
 
 Uma pequena observação (que parece até meio obvia) é que listas são iteráveis, então podemos acesssar elemento por
 elemento dela usando um loop for, por exemplo.
+
+Uma outra observação é que quando queremos acessar um elemento que está dentro de
+uma lista, que por usa vez está dentro de uma lista, nós vamos ter um aninhamento de listas
+o acesso a esse elemento será de uma forma um pouco diferença. Veja no arquivo de aninhamento.py
 '''
