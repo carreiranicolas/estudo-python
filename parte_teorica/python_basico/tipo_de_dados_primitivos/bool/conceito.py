@@ -31,6 +31,10 @@ dados que retornam valores False:
 
 None --> Não valor
 
-range(0,0) 
+range(0,0) --> Range 0
+
+{} --> Dicionário vazio (veremos essa estrutura de dados mais afrente)
+
+set() --> conjunto vazio (veremos essa estrutura de dados mais afrente)
 
 '''

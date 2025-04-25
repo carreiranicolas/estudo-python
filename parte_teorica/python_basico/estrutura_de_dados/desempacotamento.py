@@ -35,7 +35,61 @@ e passa os elementos individualmente para a função print, como se fossem argum
 
 Enquanto isso, ao usar print(resto), ele exibirá a lista inteira
 
-
 Uma curiosidade é que quando não formos usar os nomes que restaram, ao invés de criar a variável *resto, ficou 
 convencionado com os desenvolvedores python de criar uma variável chamada *_.
+'''
+
+'''
+Outro detalhe muito importante sobre desempacotamento é o seguinte: Suponhamos que nós tenhamos a seguinte lista:
+
+lista = ['Maria', 'Helena', 1,2,3, 'Eduarda']
+
+Se quisséssemos extrair dessa lista, por exemplo, apenas o primeiro e último elemento e deixar o resto de lado
+Como fáriamos? 
+
+Veja abaixo:
+'''
+lista = ['Maria', 'Helena', 1,2,3, 'Eduarda']
+
+primeiro, *_, ultimo = lista
+
+print(primeiro, ultimo) #Retorna: Maria Edurada
+
+'''
+Mas e se quiséssemos pegar também o penúltimo elemento (o número 3)? Para pegar o penúltimo elemento, bastaria 
+adicionar uma variável antes da variável “ultimo” no desempacotamento. 
+
+Veja:
+'''
+
+primeiro, *_, tres, ultimo = lista
+
+print(primeiro, tres, ultimo) #Retorna: Maria 3 Edurada
+
+'''
+Agora, uma pergunta mais dificil, e se nos quiséssemos pegar apenas o número 2 e o nome Eduarda? Como faríamos? 
+
+Veja abaixo:
+'''
+
+*_, numero2, _, ultimo = lista
+
+print(numero2, ultimo) #Retorna: 2 Edurada
+
+'''
+Acima, o que acontece é vamos pegar apenas o numero 2 e o nome Eduarda, mas aí você deve estar se perguntando:
+Como ele sabe exatamente onde começa o numero 2 na lista pra ele pegar? Por que nessa variavel numero2 ele não peria ter
+pego o numero 1, por exemplo? 
+
+O que acontece é que ele vai se basear no último elemento que estamos desempacotando. A variavel ultimo está desempacotando o
+último elemento da lista, então quando ele idendifica que a variavel ultimo é o último elemento da lista e que antes de ultimo
+temos a variavel _ (que guardará o 3), ele se localiza e sabe que a variavel numero2 terá que armazenar o valor 2
+
+
+
+Além disso, quando escrevemos: *_, numero2, _, ultimo = lista
+o _ começará guardando ['Maria', 'Helena', 1], mas depois, quando aparece o segundo _, ele é reatribuído ao valor 3. (como
+não vamos usar esses valores guardados na variavel _ não tem importancia se perdemos eles em uma reatribuição, por exemplo)
+
+
 '''
