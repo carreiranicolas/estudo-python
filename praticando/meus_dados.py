@@ -1,5 +1,6 @@
 '''
-O exercicio a seguir consiste na prática dos conteúdos de: Variaveis, função print e tipos de dados
+O exercicio a seguir consiste na prática dos conteúdos de: Variaveis, função print e tipos de dados. Esse exercicio
+foi feito na época de estudo do módulo básico
 
 A instrução é fazer uma espécie de "relatório" com os meus dados
 '''
