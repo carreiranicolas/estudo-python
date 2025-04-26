@@ -56,6 +56,52 @@ print(lista.count('Nicolas')) #Irá exibir 1, pois Nicolas só aparece uma vez n
 '''
 MÉTODO COPY
 
+Para entender esse método de lista, temos que entender que estamos trabalhando com um tipo mutável, então fazer algumas 
+coisas é sempre muito complicado, pois alterações podem acontecer a qualquer momento e complicar nossa vida.
+
+Visto isso, o método copy é usado em lista quando às vezes queremos criar uma cópia da lista original para poder fazer 
+alterações sem modificar a lista original.
+
+Se tentarmos fazer, por exemplo, da seguinte forma:
+
+lista1 = [1, 2, 3]
+lista2 = lista1
+
+Isso não dará certo, não estamos criando uma cópia da lista 1 na variavel lista2, estamos apenas criando uma nova variável
+(lista2) que aponta para o mesmo local da memória que lista1.
+
+Ou seja: qualquer alteração feita em lista2 também afeta lista1. Veja:
+
+lista1 = [1, 2, 3]
+lista2 = lista1
+
+lista2.append(4)
+
+print(lista1)  # [1, 2, 3, 4]
+print(lista2)  # [1, 2, 3, 4]
+
+# Ou seja, acima podemos ver que a alteração na lista2 atingiu a lista original também
+
+Portanto, para contornar isso, se quisermos criar uma cópia independente, usamos o método copy(). Veja:
+
+lista1 = [1, 2, 3]
+lista2 = lista1.copy()
+
+lista2.append(4)
+
+print(lista1)  # [1, 2, 3]
+print(lista2)  # [1, 2, 3, 4]
+
+Agora sim: lista1 permaneceu intacta e lista2 foi modificada sem afetar a original.
+
+Dessa for, o que o método copy fez foi criar uma nova lista, copiar todos os elementos da lista original para essa nova 
+lista e aí as duas listas passam a ser listas separadas 
+
+OBS: existe ainda o conceito de cópia rasa, que falaremos no módulo intermediário, mas falando de forma rápida, é quando
+a lista que queremos fazer a cópia tem dentro dela outras listas dentro dela (listas aninhadas), aí o copy() não copia 
+profundamente os objetos internos. Eles ainda serão compartilhados entre a lista original e a lista copiada. Sendo assim,
+se alterarmos algo na lista que está dentro da original, será alterado na lista copiada!
+
 
 
 '''
