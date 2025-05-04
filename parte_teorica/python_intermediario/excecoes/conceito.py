@@ -43,6 +43,9 @@ ZeroDivisionError: division by zero
 
 Uma curiosidade é que toda exceção é uma insantancia de uma classe que herda de uma classe base chamada Exception.
 O ZeroDivisionError, por exemplo, é uma instancia da classe ArithmeticError que herda da classe-base (Exception).
-Ainda entenderemos melhor sobre isso, veremos mais afrente. Não se preocupe
+Ainda entenderemos melhor sobre isso, veremos mais afrente. Não se preocupe. Caso queira ver a hierarquia das
+exceções, veja abaixo:
+
+https://docs.python.org/pt-br/3/library/exceptions.html#built-in-exceptions
 
 '''
