@@ -3,7 +3,7 @@ MODULOS PESSOAIS - IMPORTAÇÃO
 
 Bom já entendemos que modulos são arquivos que possuem código Python, mas algo extremamente interessante
 é que podemos fazer a importação de modulos pessoais. Aí você deve estar se perguntando como isso é
-possível? Nós já não dissémos que módulos são basicamente arquivos que possuem código python? Então,
+possível? Nós já dissémos que módulos são basicamente arquivos que possuem código python, correto? Então,
 quando estamos fazendo algo em python, nós temos justamente um arquvio com código python, então podemos
 importar as coisas que tem nesse arquivo (funções, variáveis..) em outros arquivos. Mas uma observação
 importante é que temos que tomar cuidado para não criar nome de modulos que já existem. Exemplo: 
@@ -33,7 +33,7 @@ em nosso programa é chamado de __main__. Ou seja, o __main__ é sempre executad
 Agora, suponhamos que nós tenhamos um arquivo (módulo) que queremos importar que se chama importe.
 Quando formos para ele e fizermos print('Este módulo se chama:', __name__), isso irá nos retornar
 Este módulo se chama __main__, assim como aconteceu no primeiro arquivo. Isso acontece porque abrimos
-o arquivo importe, então ele meio que "se torna nosso arquivo principal"
+e estamos no arquivo importe, então ele meio que "se torna nosso arquivo principal"
 
 Bom, sabendo disso, se formos ao nosso primeiro arquivo e dermos: import importe e executarmos o
 primeiro arquivo (lembrando que o primeiro arquvio tinha dentro dele um print print('Este módulo se chama:', __name__), 
@@ -75,9 +75,23 @@ saudacao = 'Olá'
 
 Para utilizar essa váriavel do módulo importe no nosso primeiro arquivo, temos algumas formas de fazer:
 
-1- nome_modulo.variavel
+1:
 
-A primeira forma é bem simples, basta você 
+import importe
 
+print(nome_modulo.variavel)
+
+A primeira forma é bem simples, basta você utilizar o nome do modulo importado com um ponto e depois o nome da variavel.
+Mas se tivéssemos varias coisas no módulo importe e quiséssemos só acessar a variavel saudacao? Ai bastaria fazer da segunda
+forma
+
+2: 
+
+from importe import variavel
+
+print(variavel)
+
+Ou seja, no fim das contas a importação e o uso de coisas em modulos pessoais funciona da mesma forma que vimos para outros
+modulos em conceito.
 
 '''

@@ -75,7 +75,7 @@ print('Continua')
 
 No código acima, estariamos fazendo algo que não é muito interessante também, pois estamos cobrindo 
 o erro de divisão por 0, mas se no nosso código ocorresse outro erro além da divisão por 0? Ele não 
-seria coberto.
+seria coberto. Então logo veremos como solucionar isso
 
 Enfim, agora para simplificarmos, o fluxo do try-except é:
 
