@@ -15,10 +15,13 @@ arquivo Python nosso, nós podemos reutiliza-lo em outros arquivos, facilitando 
 repetição de código
 
 Se o arquivo que você estiver, está na mesma pasta do arquivo (módulo) que você quer importar, podemos fazer: 
-import modulopessoal, assim como vimos no arquivo de conceitos 
+
+--> import modulopessoal (assim como vimos no arquivo de conceitos )
 
 Além disso, para modulos pessoais também conceguimos importar apenas partes do modulo (funções, variaveis..).
-Para isso, basta fazer: from modulopessoal import soma, assim como vimos no arquivo de conceitos também
+Para isso, basta fazer: 
+
+--> from modulopessoal import soma (assim como vimos no arquivo de conceitos também)
 
 Algo interessante que podemos fazer pasa visualizar a importação do modulo é o seguinte: 
 

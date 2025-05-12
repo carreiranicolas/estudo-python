@@ -61,7 +61,50 @@ a função soma dentro do nosso arquivo de teste.py, daria erro, pois ele não f
 se tentarmos utilizar as variaveis saudacao e temperatura, que foram adicionadas dentro de __all__ e portanto foram
 importadas quando utilizamos from meu_pacote.modulo2 import *
 
-Dessa forma, fazendo das maneiras acima, poderemos utilizar a função soma dentro do nosso modulo teste.py. Mas agora, e se
-estivéssemos dentro do modulo1 que assim como o modulo2 está dentro de meu_pacote e quiséssemos utilizar a função
-soma? Aí como ambos estão dentro do mesmo pacote, bastaria fazer:
+'''
+
+
+'''
+
+ARQUIVOS DENTRO DO MESMO PACOTE
+
+Até agora, tudo que vimos envolvia modulos dentro de pacotes e modulos que estavam fora do pacote. Portanto, até o
+exato momento, tudo que vimos relacionado a importação de modulos/importação de funções de modulos dentro de pacotes
+estava relacionado com um arquivo (modulo) que não pertencia ao pacote que queriamos importar os modulos/funções  
+
+Mas agora, e se estivéssemos dentro do modulo1 que assim como o modulo2 está dentro de meu_pacote e quiséssemos utilizar somente a função
+soma que está dentro do modulo2? Aí como ambos estão dentro do mesmo pacote, bastaria fazer:
+
+--> from modulo2 import soma
+
+
+(Portanto, para arquivos de um mesmo pacote, a importação é feita NORMALMENTE (da mesma forma que vimos no arquivo de conceito de modulos))
+
+Nada que não tenhamos visto. Mas agora, um GRANDE DETALHE:
+
+Se formos para o nosso teste.py (que está FORA de meu_pacote) e tentarmos importar qualquer coisa do modulo1 fazendo:
+
+from meu_pacote.modulo1 import algo
+
+Se tentarmos fazer isso acima, isso dará ERRO. O que acontece é que dentro de modulo1 nós temos: from modulo2 import soma
+Com isso, o python, quando vai fazer a importação de algo do modulo1, também tenta fazer essa importação que está sendo feita no
+modulo1 (from modulo2 import soma), mas ele não consegue encontrar o módulo modulo2.py, pois o teste.py, que é o nosso main
+não está dentro de meu_pacote
+
+
+Para resolver isso, nós teríamos que ir lá em modulo1.py e reescrever o import dele. Veja:
+
+ANTES:
+
+--> from modulo2 import soma
+
+
+DEPOIS:
+
+--> from meu_pacote.modulo2 import soma
+
+
+Portanto, podemos fazer "import modulo" ou "from modulo import algo" para arquivos que estão no mesmo pacote. No entanto, temos que
+ficar atento se estivermos fazendo isso e o nosso main for um arquivo de fora do pacote.
+
 '''

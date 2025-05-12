@@ -14,7 +14,7 @@ isso é por conta de um modulo chamado de importlib
 
 O importlibnos permite recarregar algum modulo que quisermos. Para isso, faríamos:
 
-import importlib
+--> import importlib
 
 importlib.reload(nome_modulo).
 
