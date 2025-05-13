@@ -66,7 +66,7 @@ importadas quando utilizamos from meu_pacote.modulo2 import *
 
 '''
 
-ARQUIVOS DENTRO DO MESMO PACOTE
+ARQUIVOS DENTRO DO MESMO PACOTE (e pontos de vista)
 
 Até agora, tudo que vimos envolvia modulos dentro de pacotes e modulos que estavam fora do pacote. Portanto, até o
 exato momento, tudo que vimos relacionado a importação de modulos/importação de funções de modulos dentro de pacotes
