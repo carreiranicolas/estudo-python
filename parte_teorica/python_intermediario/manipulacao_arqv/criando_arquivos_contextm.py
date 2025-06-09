@@ -40,7 +40,7 @@ modos e suas funções são:
 
 --> 'r': Serve para leitura de arquivos
 
---> 'a': Serve para escrita no  final do arquivo. Ou seja, adiciona linhas no final do arquivo
+--> 'a': Serve para escrita no final do arquivo. Ou seja, adiciona linhas no final do arquivo
 
 --> 'b': Serve para binário (Não entendi)
 
