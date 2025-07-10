@@ -39,13 +39,55 @@ soma(1,2,3,4,5) # Irá retornar [1, 2, 3, 4, 5]
 Agora voltando, para nós fazermos a soma de todos os valores que passamos no argumento, nós precisaríamos iterar a 
 tupla a partir de um loop for e ir acumulando esses valores em uma variável, assim como fizemos abaixo:
 
+def soma(*args):
+    total = 0
+    for numero in args:
+        total += numero
+    return total
+
+print(soma(1,2,3,4,5)) # Exibe 15
+
 
 Assim, ele iteraria, faria o acumulo dos números no total e depois nos retornaria o total
 
 
 Uma observação é se criássemos uma variável e passassemos os valores que queremos fazer a soma para ela e depois 
 passassemos essa variavel para a nossa função soma, isso não daria certo, porque quando passamos varios valores em 
-uma varíavel  isso irá virar uma tupla. Dessa forma, como passamos uma tupla como argumento, lembre que o que o *args vai fazer será empacotar os argumentos que passamos para a função em uma tupla, portanto teríamos uma tupla dentro de uma tupla e aí ficaria tudo bugado e nos retornaria o erro que vimos. 
+uma varíavel  isso irá virar uma tupla. Dessa forma, como passamos uma tupla como argumento, lembre que o que o 
+*args vai fazer será empacotar os argumentos que passamos para a função em uma tupla, portanto teríamos uma tupla 
+dentro de uma tupla e aí ficaria tudo bugado e nos retornaria um erro. 
+
+
+Portanto, caso formos passar os valores para uma variavel para depois passar como argumento para a nossa função soma 
+nós temos que passar essa variavel de forma desempacotada, tendo em vista que o *args irá empacotar os valores ali 
+novamente. Veja:
+
+def soma(*args):
+    total = 0
+    for numero in args:
+        total += numero
+    return total
+
+numeros = 1, 2, 3, 4, 5
+
+soma_1_ao_5 = soma(*numeros) #Passando a variavel numeros de forma desempacotada
+print(soma_1_ao_5) # Exibe 15
+
+Ao fazer *numeros, nós estamos passando os valores da variavel numeros de forma desempacotada, diferente do exemplo 
+anterior (onde tinhamos passado os valores de numeros de forma empacotada, ou seja, em forma de tupla). A partir 
+disso, o *args irá empacotar os valores que passamos como argumento em uma tupla (como pode ser visto no primeiro 
+print) e depois irá executar toda a função e resultar no resultado que queríamos. Então, caso formos passar os 
+valores para uma variável para depois passar como argumento para a nossa função soma, temos que passar de forma 
+desempacotada.
+
+
+Um detalhe é que na função sum, que é uma função para somar números padrão do python, nós temos que passar os valores 
+de forma empacotada, então bastaria nós passarmos a variável números sem desempacotar que já daria certo. Veja:
+
+numeros = 1, 2, 3, 4, 5
+
+print(sum(numeros)) # Exibe 15
+
 
 '''
 
