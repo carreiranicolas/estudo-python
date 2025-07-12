@@ -46,7 +46,44 @@ saudacao recebe o argumento posicional "msg" e nós não passamos nada. Para sol
 
 def executa(funcao, msg):
     return funcao(msg)
+
+Dessa forma, se agora fizermos:
+
+v = executa(saudacao('Oi'))
+
+Isso acima dará certo. Executamos a função executa, que recebeu como argumento a função saudacao e o argumento ‘Oi’. 
+A partir disso, a função executa retornou a função saudacao executada com o argumento ‘Oi’ que foi recebido pela 
+própria função executa.
+
+Perfeito, agora vamos imaginar que nossa função saudacao passe a receber dois argumentos agora: o msg (a mensagem de 
+saudação) e o nome (um nome qualquer) e retornasse uma string com esses dois argumentos, como abaixo:
 '''
+
+def saudacao(msg, nome):
+    return f'{msg}, {nome}!'
+
+'''
+Tendo nossa nova função saudação acima, se tentarmos fazer:
+
+v = executa(saudacao, 'Oi')
+
+Dará erro. Isso acontece porque na função executa, no return dela, estamos executando a função saudacao, porém 
+estamos executando-na passando um argumento a menos que ela deveria ter (o argumento nome, no caso), então temos que 
+fazer essa alteração na função executa para correr tudo certinho. No entanto, o que podemos fazer é deixar essa 
+função executa dinâmica, pois se a cada parametro que adicionarmos a mais na função saudacao, nós tivermos que fazer 
+a alteração na função executa, estaremos fritos. Portanto, ao invés de ir na função executa e adicionar mais um 
+parametro chamado “nome”, nós vamos lá e vamos apagar o parâmetro msg e adicionar o parametro chamado *args. 
+Isso porque o *args poderá receber uma série de valores e passa-los para função saudacao, sem precisarmos alterar o 
+numero de parametros recebidos pela função executa sempre que alterarmos isso função saudacao. Veja:
+
+def executa(funcao, *args): --> o *args aqui recebe os valores de maneira empacotada
+    return funcao(*args) --> o *args aqui passa os valores de maneira desempacotada
+
+'''
+
+
+
+
 
 
 
