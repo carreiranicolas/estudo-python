@@ -1,7 +1,8 @@
 '''
 CLOSURE
 
-(conceituando closure)
+Falando sobre conceito, podemos dzer que closure é quando uma função interna acessa variáveis do escopo de uma 
+função externa mesmo após a função externa ter sido encerrada.
 
 Para entender melhor sobre closure, vamos a um exemplo:
 '''
@@ -74,7 +75,7 @@ def saudacao(saudacao):
 saudacao1 = saudacao('Bom dia')
 saudacao2 = saudacao('Boa noite')
 print(saudacao1('José'))
-print(saudacao2('Maria'))
+print(saudacao2('José'))
 
 '''
 Nós padronizamos o 'Bom dia' e 'Boa noite' (Isso acontece porque será executada a função saudacao, que irá receber o 
