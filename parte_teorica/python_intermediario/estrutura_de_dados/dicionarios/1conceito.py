@@ -64,10 +64,13 @@ pessoa1 = {
 
 '''
 Perceba que  criamos endereços e dentro dessa chave colocamos uma lista e essa lista tem dentro dela outros dicionários.
-Para acessar 'rua' que fica.. Fazemos
-
+Para acessar 'rua' que fica dentro da lista em 'endereços', fazemos:
 '''
 
+print(pessoa1['endereços'][0]['rua']) #Isso retorna: Humberto Pereira
+
+
+print(pessoa1['endereços'][1]['rua'])  #Isso retorna: Rangel Mauro
 
 
 '''
@@ -75,5 +78,28 @@ Um deatlhe é que o dicionário especificamente não é iteravel, mas se fizermo
 do dicionário que nos entrega as chaves, então poderíamos fazer:
 '''
 
+for chave in pessoa1:
+    print(chave) #Irá retornar: nome
+                               #sobrenome
+                               #idade
+                               #altura
+                               #endereços
+
 
 #A partir disso, poderíamos acessar os valores dentro das chaves de forma dinâmica da seguinte forma:
+
+for chave in pessoa1:
+    print(chave, pessoa1[chave]) #Irá retornar: nome Nicolas
+                                                #sobrenome Carreira
+                                                #idade 19
+                                                #altura 1.72
+                                                #endereços [{'rua': Humberto Pereira1, 'número': 254}, {'rua': Rangel Mauro, 'número': 6122}]
+
+'''
+Já vimos como criamos dicionários e como acessamos seus valores. Agora, veremos mais alguns detalhes. Veremos como
+criar novas chaves em um dicionário já existente, como editar os valores das chaves já existentes e como exclui-las
+
+
+
+
+'''
