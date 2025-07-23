@@ -30,6 +30,9 @@ conjunto = {} --> isso é um dicionario vazio, para ser set, deveremos ter eleme
 
 Ao criarmos sets dessa forma estamos passando diretamente os elementos que queremos no conjunto. Estamos meio que
 inserindo os elementos individualmente no conjunto.
+
+Dessa forma, se tentarmos fazer: {[1,2,3], 'José'}, dará erro, pois estamos tentando inserir uma lista 
+dentro de um conjunto (set)
 ------------------------------------------------------------------------------------------------------------------------------
 
 Uma das particularidades do tipo set é que ele gosta de elementos únicos dentro dele — ou seja, não curtem duplicatas.
@@ -60,16 +63,36 @@ conjunto4 = set(['Nicolas', 20, 10, ['José', 1]]) #Irá dar erro, pois passamos
 
 '''
 Como sets curtem valores únicos, eles são muito uteis para eliminar valores duplicados de outras estrutura de dados.
-Veja abaixo como isso pode ser feito
-
-
-
+Veja abaixo como isso pode ser feito:
 '''
+
+lista_valores_repetidos = [1,2,3,1,2,3,1,2,3]
+
+conjunto = set(lista_valores_repetidos) 
+
+#Acima, estamos criando um conjunto com cada elemento da lista_valores_repetidos, mas como os sets curtem valores
+# unicos, os valores repetidos da lista foram eliminados. Veja:
+
+print(conjunto) # Retorna: {1,2,3}
+
+#Agora, bastaria transformar esse conjunto com os valores duplicados eliminados em uma lista:
+
+lista_valores_unicos = list(conjunto)
+
+print(lista_valores_unicos) # retorna: [1,2,3]
 
 
 '''
 Como os sets não tem index ( e isso é até meio previsível, pois como falamos, sets não conseguem garantir a ordem dos elementos ),
 sempre que quisermos encontrar uma coisa especifica dentro de um set, podemos fazer:
 '''
+
+conjunto_nome = set('Nicolas')
+
+
+if 's' in conjunto_nome:
+    print('s', True) #Retorna: s True
+else:
+    print('Não há essa letra')
 
 

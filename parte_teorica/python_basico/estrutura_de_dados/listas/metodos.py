@@ -53,6 +53,8 @@ lista.remove('José') #Irá remover 'José' da lista
 print(lista.count('Nicolas')) #Irá exibir 1, pois Nicolas só aparece uma vez na lista
 
 
+# Método sort: 
+
 '''
 MÉTODO COPY
 
