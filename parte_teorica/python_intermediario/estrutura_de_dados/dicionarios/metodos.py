@@ -100,6 +100,99 @@ print(pessoa) #Retorna: {'sobrenome': 'Carreira'}
 
 # MÉTODOS DE CÓPIA (.copy() e deepcopy())
 
+'''
+Assim como em listas, os dicionarios também tem o método .copy(). Já falamos sobre esse método 
+em metodos.py de estrutura_de_dados da parte_basica, mas vamos relembrar. Suponhamos que tenhamos um 
+dicionario1 (que é um tipo mutavel) abaixo:
+'''
+
+dicionario1 = {
+    'n1': 1,
+    'n2': 2
+}
+
+'''
+Se criarmos a variavel dicionario2 e atribuirmos o dicionario1 a ela, nós não estaremos fazendo uma 
+cópia do dicionario1 na variavel dicionario2. O que estará acontecendo é que a variavel dicionario2 
+estará apontando para dicionario1 e então, quando fizermos alguma alteração em dicionario2, ela será 
+feita em dicionario1 também. Veja na prática:
+'''
+
+print(dicionario1) #Retorna: {'n1': 1, 'n2': 2}
+
+# dicionario2 = dicionario1 --> deixei comentado para dar seguimento a explicações futuras
+
+# dicionario2['n1'] = 1000 --> deixei comentado para dar seguimento a explicações futuras
+
+print(dicionario1) #Retorna: {'n1': 1000, 'n2': 2}, apesar da alteração ter sido feita em dicionario2
+
+'''
+Dessa forma, para fazermos a cópia, iremos precisar usar o método .copy() e ele nos irá retornar uma 
+cópia rasa (shallow copy). Veja:
+'''
+
+dicionario2 = dicionario1.copy()
+
+dicionario2['n1'] = 1000
+
+print(dicionario1) #Agora retorna: {'n1': 1, 'n2': 2}
+print(dicionario2) #Agora retorna: {'n1': 1000, 'n2': 2}
+
+'''
+Agora, note que ao fazermos uma alteração no dicionario2, ela não se reflete no dicionario1, pois a 
+variavel dicionario2 não aponta mais para dicionario1, uma vez que fizemos a copia do dicionario1 em 
+dicionario2, assim dicionario2 terá seu próprio dicionario.
+
+Teoricamente estaria tudo bem, mas isso que fizémos é uma cópia rasa, ou seja, tudo que que for 
+imutável e estava no dicionario1, será copiado para dicionario2, mas caso não for imutavel.. Aí teremos 
+um problema. Se tivéssemos uma lista dentro de dicionario1 e tentássemos copiar o dicionario1 para 
+dicionario2, o que aconteceria é que não teríamos uma lista diferente copiada para o dicionario2. Na 
+verdade, a lista que seria copiada para o dicionario2 estaria linkada à lista do dicionario1 e isso é 
+um problema, pois se quisséssemos alterar os valores dessa lista apenas no dicionario1, também seria 
+alterado no dicionario2. Veja:
+
+'''
+
+dicionario1 = {
+    'n1': 1,
+    'n2': 2,
+    'lista': [1,2,3]
+}
+
+print(dicionario1) #Retorna: {'n1': 1, 'n2': 2, 'lista': [1, 2, 3]}
+
+dicionario2 = dicionario1.copy()
+
+dicionario2['lista'][0] = 9999999
+
+print(dicionario1) #Retorna: {'n1': 1, 'n2': 2, 'lista': [9999999, 2, 3]}
+
+'''
+Perceba que alteramos o valor de indice 0 da lista do dicionario2, mas também alterou no dicionario1, 
+pois as listas estão linkadas. Esse é o problema do Shallow Copy, por isso temos que fazer um Deep Copy. 
+Para fazer um Deep Copy, o python tem um módulo chamado copy (import copy) e aí usaríamos u método 
+chamado deepcopy. VeJA:
+'''
+
+import copy
+
+dicionario1 = {
+    'n1': 1,
+    'n2': 2,
+    'lista': [1,2,3]
+}
+
+print(dicionario1) # Retorna: {'n1': 1, 'n2': 2, 'lista': [1, 2, 3]}
+
+dicionario2 = copy.deepcopy(dicionario1)
+
+dicionario2['lista'][0] = 999999
+
+print(dicionario1) #Continua retornando {'n1': 1, 'n2': 2, 'lista': [1, 2, 3]}
+
+print(dicionario2) #Retorna {'n1': 1, 'n2': 2, 'lista': [999999, 2, 3]}
+
+
 
 #Método .clear(): Limpa tudo dentro do dicionário
 

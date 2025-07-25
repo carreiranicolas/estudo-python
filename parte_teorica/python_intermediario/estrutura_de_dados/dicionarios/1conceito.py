@@ -36,6 +36,14 @@ pessoa2 = dict(nome='Luiza', sobrenome='Carreira', idade=16, altura=1.60)
 
 print(pessoa2, type(pessoa2)) # {'nome': 'Luiza', 'sobrenome': 'Carreira', 'idade': 16, 'altura': 1.6} <class 'dict'>
 
+#CURIOSIDADE: Podemos criar dicionarios a partir de tuplas. Veja:
+
+# 1- Criando dicionarios com tuplas: Precisamos ter uma lista com as tuplas, sendo que cada tupla
+# precisa ter 2 valores (um será referente a chave e outro será referente ao valor)
+
+lista_tuplas = [('nome', 'José'), ('idade', 25), ('cidade', 'São Paulo')]
+dicionario = dict(lista_tuplas)
+print(dicionario) # Retorna: {'nome': 'José', 'idade': 25, 'cidade': 'São Paulo'}
 
 '''
 Um detalhe que é importante de se falar é que se criarmos um dicionario com chaves repetidas, mas valores diferentes,

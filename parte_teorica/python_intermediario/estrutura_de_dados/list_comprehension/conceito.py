@@ -25,5 +25,6 @@ Se quiséssemos multiplicar o valor da iteração por algum número, por exemplo
 
 list_comprehension = [numero * 2 for numero in range(10)] --> Irá nos retornar: [0,2,4,6,8,10,12,14,16,18]
 
-Portanto, perceba acima que estamos aplicando uma lógica nas iterações do loop for, tornando a adição dos valores da lista dinamica
+Portanto, perceba acima que estamos aplicando uma lógica nas iterações do loop for, tornando a adição dos valores da lista dinamica.
+o nome disso é mapeamento e podemos ver com mais detalhes no modulo mapeamento_de_dados.py
 '''
