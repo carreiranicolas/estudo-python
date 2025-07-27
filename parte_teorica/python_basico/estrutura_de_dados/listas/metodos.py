@@ -53,7 +53,45 @@ lista.remove('José') #Irá remover 'José' da lista
 print(lista.count('Nicolas')) #Irá exibir 1, pois Nicolas só aparece uma vez na lista
 
 
-# Método sort: 
+'''
+MÉTODO .SORT()
+
+Esse método pode ser usado apenas em listas e modifica a lista original (ou seja, esse método não
+retorna nada)
+
+lista = [3, 1, 4, 2]
+
+lista.sort()
+
+print(lista) #Retorna: [1, 2, 3, 4]
+
+Um detalhe é que a função sorted aceita os parametros key= e reverse=.
+
+O reverse=, nós iremos passar False ou True para dizer se a ordenação será em ordem crecente ou
+decrescente. Esse parametro vem com False por padrão. Veja:
+
+lista = [3, 1, 4, 2]
+
+lista.sort(reverse=True)
+
+print(lista) #Retorna: [4, 3, 2, 1]
+
+O uso do key= é mais complexo, ele recebe uma função que será aplicada a cada elemento do iterável 
+para determinar o valor a ser usado na ordenação. Em outras palavras, estamos dizendo ao python:
+"Ei, ao invés de ordenar direto os elementos, ordene baseado em alguma transformação deles."
+Veja um exemplo:
+
+palavras = ['python', 'é', 'muito', 'legal']
+ordenado = sorted(palavras, key=len)
+print(ordenado)  #Retorna: ['é', 'legal', 'muito', 'python']
+
+Acima, o Python usa o comprimento das palavras como chave de ordenação.
+
+Portanto, o key= irá receber uma função que será aplicada a cada item, o que pode customizar o critério
+de ordenação. A função recebida pelo key= pode ser até mesmo funções criadas por nós mesmo ou então
+funções do próprio python, como vimos no exemplo acima ao utilizar o len().
+
+'''
 
 '''
 MÉTODO COPY
